@@ -1,0 +1,35 @@
+public class Student {
+    private int stu_rollno;
+    private String stu_name;
+    private static String C_name;
+    static
+    {
+        C_name="GLA University";
+    }
+
+    public int getStu_rollno() {
+        return stu_rollno;
+    }
+
+    public String getStu_name() {
+        return stu_name;
+    }
+    public static String getC_name(){return C_name;}
+
+
+    public Student(int val1,String val2){
+        stu_rollno = val1;
+        stu_name = val2;
+    }
+
+}
+class StudentMain
+{
+    public static void main(java.lang.String[] args){
+        Student obj1 = new student (Integer.parseInt(args[0]),args[1]);
+        System.out.println(obj1.getStu_rollno());
+        System.out.println(obj1.getStu_name());
+        System.out.println(Student.getC_name());
+
+    }
+}
